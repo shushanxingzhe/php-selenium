@@ -75,23 +75,26 @@ class Facebook extends PHPUnit_Framework_TestCase {
         // find search field by its id
         $search = $this->webDriver->findElement(WebDriverBy::cssSelector('.header-search-input'));
         $search->click();
+        $search->sendKeys('php-webdriver');
+        $search->sendKeys(WebDriverKeys::ENTER);
 
-        // typing into field
-        $this->webDriver->getKeyboard()->sendKeys('php-webdriver');
+        $this->webDriver->wait(10, 500)->until(
+            WebDriverExpectedCondition::titleContains('Search')
+        );
 
-        // pressing "Enter"
-        $this->webDriver->getKeyboard()->pressKey(WebDriverKeys::ENTER);
-
-        $firstResult = $this->webDriver->findElement(WebDriverBy::cssSelector('li.public:nth-child(1) > h3:nth-child(3) > a:nth-child(1) > em:nth-child(2)'));
-
+        $firstResult = $this->webDriver->findElement(WebDriverBy::cssSelector('li.repo-list-item:nth-child(1) > h3:nth-child(2) > a:nth-child(1)'));
         $firstResult->click();
+
+        $this->webDriver->wait(10, 500)->until(
+            WebDriverExpectedCondition::not(WebDriverExpectedCondition::titleContains('Search'))
+        );
 
         // we expect that facebook/php-webdriver was the first result
         $this->assertContains("php-webdriver",$this->webDriver->getTitle());
 
         // checking current url
         $this->assertEquals(
-            'http://github.org/facebook/php-webdriver',
+            'https://github.com/facebook/php-webdriver',
             $this->webDriver->getCurrentURL()
         );
     }
