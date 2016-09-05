@@ -7,9 +7,10 @@ A simple project integrated PHPUNIT,Facebook webdriverd
 System Requirements
 ===================
 
-XHGui has the following requirements:
+PHP Selenium has the following requirements:
 
  * PHP version 5.6 or later.
+ * Firefox browser
  * [Composer](https://getcomposer.org/)
  * [Selenium Standalone Server](http://www.seleniumhq.org/download/)
  * [Firefox driver](https://github.com/mozilla/geckodriver/releases)
