@@ -3,7 +3,7 @@ PHP Selenium
 
 A simple project integrated PHPUNIT,Facebook webdriverd and use Travis CI
 
-
+[![Build Status](https://travis-ci.org/shushanxingzhe/php-selenium.svg?branch=master)](https://travis-ci.org/shushanxingzhe/php-selenium)
 System Requirements
 ===================
 
@@ -13,7 +13,7 @@ PHP Selenium has the following requirements:
  * Firefox browser
  * [Composer](https://getcomposer.org/)
  * [Selenium Standalone Server](http://www.seleniumhq.org/download/)
- * [Firefox driver](https://github.com/mozilla/geckodriver/releases)
+ * [Chrome driver](https://sites.google.com/a/chromium.org/chromedriver/)
  * [PHPUNIT](https://phpunit.de)
 
 
@@ -31,9 +31,9 @@ cd /path/to/project
 composer update
 ```
 
-Run Selenium Server with Firefox driver
+Run Selenium Server with Chrome driver
 ```sh
-java  -Dwebdriver.gecko.driver=/path/to/firefox driver/geckodriver  -jar /path/to/selenium server/selenium-server-standalone-3.0.0.jar
+java  -Dwebdriver.chrome.driver=/path/to/chromedriver  -jar /path/to/selenium server/selenium-server-standalone-3.0.0.jar
 ```
 
 Run the project with phpunit
