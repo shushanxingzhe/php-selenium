@@ -13,14 +13,13 @@ install:
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
     #- "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16 +extension RANDR"
-    - export LD_LIBRARY_PATH=”/usr/local/lib/firefox/”; export PATH=”$PATH:/usr/local/bin/firefox”;
     - composer update
+    - apt-get install -y chromium-browser
     - "wget http://selenium-release.storage.googleapis.com/3.0-beta3/selenium-server-standalone-3.0.0-beta3.jar -O selenium-server-standalone.jar && sudo mv selenium-server-standalone.jar /usr/local/bin"
-    - "wget https://github.com/mozilla/geckodriver/releases/download/v0.10.0/geckodriver-v0.10.0-linux64.tar.gz -O geckodriver.tar.gz && tar -zxf geckodriver.tar.gz && sudo mv geckodriver /usr/local/bin"
-    - "java  -Dwebdriver.gecko.driver=/usr/local/bin/geckodriver  -jar /usr/local/bin/selenium-server-standalone.jar &"
+    - "wget http://chromedriver.storage.googleapis.com/2.23/chromedriver_linux64.zip -O chromedriver.zip && unzip chromedriver.zip && sudo mv chromedriver /usr/local/bin"
+    - "java  -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver  -jar /usr/local/bin/selenium-server-standalone.jar &"
     - sleep 3
-    - sudo whereis firefox
-    - firefox
+    - sudo whereis chrome
     - sudo netstat -natupl | grep 444
     
 script:
