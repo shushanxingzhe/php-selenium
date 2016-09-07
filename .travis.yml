@@ -26,7 +26,7 @@ before_script:
     - "wget https://github.com/mozilla/geckodriver/releases/download/v0.10.0/geckodriver-v0.10.0-linux64.tar.gz -O geckodriver.tar.gz && tar -zxf geckodriver.tar.gz && sudo mv geckodriver /usr/local/bin"
     - "java  -Dwebdriver.gecko.driver=/usr/local/bin/geckodriver  -jar /usr/local/bin/selenium-server-standalone.jar &"
     - ps aux | grep java
-    - netstat -natupl | grep 444
+    - sudo netstat -natupl | grep 444
     
 script:
   phpunit Facebook.php
