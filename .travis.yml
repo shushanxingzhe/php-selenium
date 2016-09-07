@@ -16,6 +16,11 @@ jdk:
 
 addons:
   firefox: "31.0"
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - openjdk-8-jdk
   
 
 # execute any number of scripts before the test run, custom env's are available as variables
