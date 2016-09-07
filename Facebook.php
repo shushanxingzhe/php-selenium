@@ -27,7 +27,7 @@ class Facebook extends PHPUnit_Framework_TestCase {
     {
         $host = 'http://localhost:4444/wd/hub';
         //$host = 'http://localhost:4444/wd/hub';
-        $desired_capabilities = DesiredCapabilities::firefox();
+        $desired_capabilities = DesiredCapabilities::chrome();
         $desired_capabilities->setCapability('acceptSslCerts', false);
         $this->webDriver = RemoteWebDriver::create($host, $desired_capabilities);
     }
