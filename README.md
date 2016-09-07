@@ -1,7 +1,7 @@
 PHP Selenium
 =====
 
-A simple project integrated PHPUNIT,Facebook webdriverd and use Travis CI
+A simple PHP Selenium project integrated PHPUNIT,Facebook webdriver and using Travis CI
 
 [![Build Status](https://travis-ci.org/shushanxingzhe/php-selenium.svg?branch=master)](https://travis-ci.org/shushanxingzhe/php-selenium)
 System Requirements
