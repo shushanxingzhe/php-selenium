@@ -20,6 +20,7 @@ before_script:
     - "java  -Dwebdriver.gecko.driver=/usr/local/bin/geckodriver  -jar /usr/local/bin/selenium-server-standalone.jar &"
     - sleep 3
     - sudo whereis firefox
+    - firefox
     - sudo netstat -natupl | grep 444
     
 script:
