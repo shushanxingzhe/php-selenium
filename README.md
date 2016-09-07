@@ -10,7 +10,7 @@ System Requirements
 PHP Selenium has the following requirements:
 
  * PHP version 5.6 or later.
- * Firefox browser
+ * Chrome browser
  * [Composer](https://getcomposer.org/)
  * [Selenium Standalone Server](http://www.seleniumhq.org/download/)
  * [Chrome driver](https://sites.google.com/a/chromium.org/chromedriver/)
