@@ -9,11 +9,10 @@ php:
 
 install:
   - export DISPLAY=':99.0'
-  - Xvfb :99 -screen 0 1024x768x24 -extension RANDR > /dev/null 2>&1 &
+  - Xvfb :99 -screen 0 1280x1024x16 +extension RANDR > /dev/null 2>&1 &
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
     #- "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16 +extension RANDR"
-    - Xvfb --help
     - sleep 3 # give xvfb some time to start
     - composer update
     - "wget http://selenium-release.storage.googleapis.com/3.0-beta3/selenium-server-standalone-3.0.0-beta3.jar -O selenium-server-standalone.jar && sudo mv selenium-server-standalone.jar /usr/local/bin"
