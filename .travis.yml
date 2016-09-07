@@ -8,7 +8,7 @@ php:
   - 5.6
 
 install:
-  - export DISPLAY=':99.0'
+  - export DISPLAY=':99'
   - Xvfb :99 -screen 0 1280x1024x16 +extension RANDR > /dev/null 2>&1 &
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
