@@ -12,21 +12,13 @@ php:
   # aliased to a recent hhvm version
   - hhvm
 
-jdk:
-  - openjdk8
-
-addons:
-  firefox: "31.0"
-  
-
 # execute any number of scripts before the test run, custom env's are available as variables
 before_script:
     - composer update
     - "wget http://selenium-release.storage.googleapis.com/3.0-beta3/selenium-server-standalone-3.0.0-beta3.jar -O selenium-server-standalone.jar && sudo mv selenium-server-standalone.jar /usr/local/bin"
     - "wget https://github.com/mozilla/geckodriver/releases/download/v0.10.0/geckodriver-v0.10.0-linux64.tar.gz -O geckodriver.tar.gz && tar -zxf geckodriver.tar.gz && sudo mv geckodriver /usr/local/bin"
     - "java  -Dwebdriver.gecko.driver=/usr/local/bin/geckodriver  -jar /usr/local/bin/selenium-server-standalone.jar &"
-    - sleep 10
-    - ps aux | grep java
+    - sleep 3
     - sudo netstat -natupl | grep 444
     
 script:
