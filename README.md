@@ -1,7 +1,7 @@
 PHP Selenium
 =====
 
-A simple project integrated PHPUNIT,Facebook webdriverd
+A simple project integrated PHPUNIT,Facebook webdriverd and use Travis CI
 
 
 System Requirements
