@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+# see http://about.travis-ci.org/docs/user/languages/php/ for more hints help
+# change in other's fork
+=======
 # see http://about.travis-ci.org/docs/user/languages/php/ for more
 
+>>>>>>> refs/remotes/origin/master
 language: php
 sudo: required
 dist: trusty
