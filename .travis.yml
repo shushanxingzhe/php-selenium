@@ -1,5 +1,6 @@
 # change back to origin
 # see http://about.travis-ci.org/docs/user/languages/php/ for more help
+
 language: php
 sudo: required
 dist: trusty
@@ -11,7 +12,7 @@ php:
   - 7.0
   # aliased to a recent hhvm version
   - hhvm
-  
+
 addons:
   apt:
     sources:
@@ -32,6 +33,6 @@ before_script:
     - "java  -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver  -jar /usr/local/bin/selenium-server-standalone.jar &"
     - sleep 3
     - sudo whereis google-chrome
-    
+
 script:
   phpunit Facebook.php
