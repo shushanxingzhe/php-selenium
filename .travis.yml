@@ -1,4 +1,6 @@
-# see http://about.travis-ci.org/docs/user/languages/php/ for more hint help
+# contribution from other
+# see http://about.travis-ci.org/docs/user/languages/php/ for more help
+# change from other
 language: php
 sudo: required
 dist: trusty
