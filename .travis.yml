@@ -1,4 +1,3 @@
-# contribution from other
 # see http://about.travis-ci.org/docs/user/languages/php/ for more help
 language: php
 sudo: required
